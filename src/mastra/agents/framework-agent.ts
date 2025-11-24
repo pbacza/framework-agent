@@ -4,6 +4,8 @@ import { LibSQLStore } from "@mastra/libsql";
 
 import { readFileTool } from "../tools/read-file";
 import { readDirectoryTool } from "../tools/read-directory";
+import { writeFileTool } from "../tools/write-file";
+import { deleteFileTool } from "../tools/delete-file";
 import {
   completenessScorer,
   toolCallAppropriatenessScorer,
@@ -19,7 +21,7 @@ export const frameworkAgent = new Agent({
       You have access to ../../recipes folder
   `,
   model: "openai/gpt-4.1-mini",
-  tools: { readFileTool, readDirectoryTool },
+  tools: { readFileTool, readDirectoryTool, writeFileTool, deleteFileTool },
   scorers: {
     toolCallAppropriateness: {
       scorer: toolCallAppropriatenessScorer,
