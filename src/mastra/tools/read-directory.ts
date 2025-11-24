@@ -3,7 +3,7 @@ import { readdir } from "fs/promises";
 import { z } from "zod";
 
 export const readDirectoryTool = createTool({
-  id: "read-file",
+  id: "read-directory",
   description:
     "Read a directory and return a list of file and folder names contained in it.",
   inputSchema: z.object({

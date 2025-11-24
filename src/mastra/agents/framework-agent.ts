@@ -16,7 +16,7 @@ export const frameworkAgent = new Agent({
 
       When you are asked for something first consider if you could achieve it by doing something with files.
 
-      You have access to recipes folder
+      You have access to ../../recipes folder
   `,
   model: "openai/gpt-4.1-mini",
   tools: { readFileTool, readDirectoryTool },
