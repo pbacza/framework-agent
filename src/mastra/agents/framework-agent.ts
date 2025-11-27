@@ -12,7 +12,6 @@ export const frameworkAgent = new Agent({
   name: "Framework Agent",
   instructions: `
       You are a helpful assistant that can operate on file.
-      When you are asked for something first consider if you could achieve it by doing something with files.
       You have access to ../../recipes folder.
       If you will find relevant information story it in memory
   `,
@@ -28,7 +27,10 @@ export const frameworkAgent = new Agent({
       },
       workingMemory: {
         enabled: true,
-        template: `preferred folder for operations: `,
+        template: `
+        favorite cuisine: 
+        favorite ingredients: 
+        `,
       },
     },
     embedder: fastembed,
